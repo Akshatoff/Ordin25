@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Coming+Soon&family=Montserrat&family=Montserrat+Alternates&family=Open+Sans&family=Poppins&family=Roboto&display=swap');
+
+/* font-family: 'Bebas Neue', sans-serif;
+font-family: 'Coming Soon', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+    --bg: #000814;
+    --jyadabg: #001D3D;
+    --ajeeblue: #003566;
+    --yellow: #FFC300;
+    --kamyellow: #FFD60A;
+    --white: #fff;
+    --smoltext: 2rem;
+    --bigboi: 5rem;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+body,
+html {
+width: 100%;
+height: 100%;
+background-color: var(--bg);
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+
+}
+
+.text {
+    color: var(--white);
+
+}
+ 
+/* Home */
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heading {
+    font-size: var(--bigboi);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+/* Events */
+
+#event-head {
+    font-size: var(--bigboi);
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    margin: 2rem 5rem;
+}
+
+.spacer {
+    height: 60vh;
+    opacity: 0;
+}
+
+.cards {
+    position: relative;
+    width: 27.1875rem;
+    height: 27.1875rem;
+    margin: 0 2rem;
+    background-color: var(--bg);
+}
+
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+}
+
+.card:nth-child(odd) {
+    background-color: #FFD60A;
+}
+
+.card:nth-child(2) {
+    margin-top: 2rem;
+    margin-left: 8rem;
+}
+
+.card:nth-child(3) {
+    margin-top: 4rem;
+    margin-left: 16rem;
+}
+
+.card:nth-child(4) {
+    margin-top: 6rem;
+    margin-left: 24rem;
+}
+
+.card:nth-child(5) {
+    margin-top: 8rem;
+    margin-left: 32rem;
+}
+.card:nth-child(6) {
+    margin-top: 10rem;
+    margin-left: 40rem;
+}
+.card:nth-child(7) {
+    margin-top: 12rem;
+    margin-left: 48rem;
+}
+.card:nth-child(8) {
+    margin-top: 14rem;
+    margin-left: 56rem;
+}
+.card:nth-child(9) {
+    margin-top: 16rem;
+    margin-left: 64rem;
+}
+
+.container {
+    background: var(--bg);
+    height: 100vh;
+    display: flex;
+    align-items:flex-start;
+    justify-content: left;
+}
