@@ -1,10 +1,3 @@
-const first = document.getElementById("first");
-const second = document.getElementById("second");
-const third = document.getElementById("third");
-const fourth = document.getElementById("fourth");
-const fifth = document.getElementById("fifth");
-
-
 
 document.addEventListener("DOMContentLoaded", (event) => {
     gsap.registerPlugin(ScrollTrigger)
@@ -30,11 +23,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
             scrub: true,
             start: "top top",
             end: "+=5000",
-            invalidateOnRefresh: true
-
+            invalidateOnRefresh: true,
+            
         }
     }
    )
+
+//    Team
 
 
 // Initialize a new Lenis instance for smooth scrolling
