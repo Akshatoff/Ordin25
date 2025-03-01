@@ -1,6 +1,5 @@
-import { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
-import CircularText from "./components/CircularText";
 import BlurText from "./components/BlurText";
 import { ReactLenis, useLenis } from "lenis/react";
 import { gsap } from "gsap";
@@ -8,6 +7,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Event from "./components/Event";
 import Team from "./components/Team";
 import "./index.css";
+import Halo from "./components/Halo";
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,19 +32,10 @@ function App() {
 
   return (
     <ReactLenis root>
-      <div className="section" id="home">
-        <BlurText
-          text="Ordin@trix 25.0"
-          delay={150}
-          animateBy="words"
-          direction="top"
-          className="heading"
-        />
-      </div>
-
+      <Halo></Halo>
       <Event />
       <Team />
-      <Event />
+     
     </ReactLenis>
   );
 }

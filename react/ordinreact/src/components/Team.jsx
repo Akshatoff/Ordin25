@@ -19,25 +19,20 @@ const Team = () => {
     }
 
     const totalSlides = swiper.slides.length;
-    const scrollDuration = totalSlides * 1000; // Increase for slower effect
+    const slideWidth = swiper.width;
+    const scrollDuration = totalSlides * slideWidth; // Dynamic end value
 
     const scrollTrigger = ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
-      end: `+=${scrollDuration}`,
-      scrub: 5, // High scrub value for ultra-smooth transition
+      end: `+=${scrollDuration}`, // Ensure it scrolls for the full slider length
+      scrub: 5, // Ultra-smooth transition
       pin: true,
       pinSpacing: true,
       onUpdate: (self) => {
         if (!swiper.slides) return;
         const progress = self.progress * (totalSlides - 1);
-        gsap.to(swiper, {
-          duration: 1.5, // Controls smoothness of animation
-          ease: "power3.out", // Eases movement
-          onUpdate: () => {
-            swiper.translateTo(-progress * swiper.width, false);
-          },
-        });
+        swiper.translateTo(-progress * slideWidth, false);
       },
     });
 
@@ -57,7 +52,7 @@ const Team = () => {
         centeredSlides={true}
         loop={false}
         allowTouchMove={false} // Prevent manual dragging
-        speed={800} // Slower transition speed
+        speed={800} // Smooth transition speed
         onSwiper={(swiper) => (swiperRef.current = { swiper })}
       >
         {[...Array(9)].map((_, index) => (
